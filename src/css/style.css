@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-height: 10px;
+    padding: 3%;
+    margin:0 auto;
+    background-color: rgba(255, 255, 255, 0.429);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+nav .logo{
+    font-size: 35px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.banner{
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    margin-top: 0px; /* Começa exatamente onde deve */
+    display: block; /* Remove a margem fantasma que o HTML adiciona debaixo de imagens */
+}
+
+/* 3. O texto flutua por cima da imagem referenciando o .banner */
+.chamadas {
+    position: absolute;
+    top: 50%; /* Empurra para o meio vertical do banner */
+    left: 5%; /* Dá um respiro na lateral esquerda */
+    transform: translateY(-50%); /* Centraliza o texto exatamente no eixo Y */
+    
+    color: white;
+    font-style: unset;
+    /* Apagar o margin-top: -70% antigo, já não é necessário! */
+}

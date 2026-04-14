@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anunciar</title>
+</head>
+<body>
+    <form action="javascript: enviar();" id="novo-imovel">
+
+        <h1>Anunciar Imóvel</h1>
+
+        <div>
+            <label for="fotos">
+                Imagem do imóvel
+                <input type="file" id="foto-imovel" accept="image/*" />
+            </label>
+        </div>
+        
+        <div>
+            <label for="negocio">
+                Tipo de negócio
+                <input type="radio" id="aluguel" name="tipo" value="aluguel" />
+                <label for="aluguel">Aluguel</label>
+                <input type="radio" id="venda" name="tipo" value="venda" />
+                <label for="venda">Venda</label>
+            </label>
+        </div>
+        
+
+        <h2>Detalhes</h2>
+
+        <div>
+            <label for="titulo">
+                Título
+                <input type="text" name="titulo" id="titulo" >
+            </label>
+        </div>
+
+        <div>
+            <label for="valor">
+                Valor
+                <input type="number" name="valor" id="valor">
+            </label>
+        </div>
+
+        <div>
+            <label for="descricao">
+                Descrição
+                <textarea name="descricao" id="descricao"></textarea>
+            </label>
+        </div>
+
+        <div>
+            <label for="quartos">
+                Quartos
+                <input type="number" name="quartos" id="quartos">
+            </label>
+        </div>
+
+        <div>
+            <label for="banheiro">
+                Banheiros
+                <input type="number" name="banheiro" id="banheiro">
+            </label>
+        </div>
+        
+        <div>
+            <button type="submit" id="publicar">Publicar anúncio</button>
+        </div>
+    </form>
+
+
+    <script src="../js/models/Imovel.js"></script>
+    <script src="../js/anunciar.js"></script>
+</body>
+</html>
