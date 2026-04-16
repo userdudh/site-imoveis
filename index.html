@@ -2,14 +2,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/site-imoveis/">
-    <title>Maplar</title>
+    <title>Imóveis</title>
+
     <link rel="stylesheet" href="src/css/style.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-    <header class="navbar">
-    <div class="logo"><a href="index.html"><img src="src/assets/images/Maplar.svg" alt="Maplar logo"></a></div>
+
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="src/assets/images/Maplar.svg" alt="Maplar logo">
+        </a>
+    </div>
+
     <nav>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -19,6 +28,81 @@
             <li><a href="src/pages/meus-anuncios.html">Meus Anúncios</a></li>
         </ul>
     </nav>
-    </header>
+</header>
+
+<section class="banner">
+    <h1>Encontre ou anuncie seu imóvel</h1>
+    <p>Alugue mais rápido ou encontre sua casa ideal</p>
+
+    <div class="botoes">
+        <a href="#imoveis" class="cta">Ver imóveis</a>
+        <a href="src/pages/anunciar.html" class="cta-secundario">Anunciar meu imóvel</a>
+    </div>
+</section>
+
+<section class="beneficios">
+    <div class="beneficio">
+        <h3>Fácil de usar</h3>
+        <p>Encontre imóveis rapidamente sem burocracia</p>
+    </div>
+
+    <div class="beneficio">
+        <h3>Rápido</h3>
+        <p>Contato direto e ágil com quem anuncia</p>
+    </div>
+
+    <div class="beneficio">
+        <h3>Sem taxas escondidas</h3>
+        <p>Transparência total nos anúncios</p>
+    </div>
+</section>
+
+<section class="cta-final">
+    <h2>Tem um imóvel parado?</h2>
+    <p>Anuncie agora e encontre interessados rapidamente</p>
+
+    <a href="src/pages/anunciar.html" class="btn-cta-final">
+        Anunciar meu imóvel
+    </a>
+</section>
+
+
+
+<div class="container" id="imoveis">
+
+    <div class="card">
+        <h3>Casa no Maurício de Nassau</h3>
+        <p>3 quartos | 2 banheiros</p>
+        <p class="preco">R$ 1.200 / mês</p>
+        <a href="aluguel.html" class="btn">Quero alugar</a>
+    </div>
+
+    <div class="card">
+        <h3>Casa no Centro</h3>
+        <p>2 quartos | 1 banheiro</p>
+        <p class="preco">R$ 900 / mês</p>
+        <a href="aluguel.html" class="btn">Quero alugar</a>
+    </div>
+
+</div>
+
+
+<h2 class="titulo-mapa">Veja no mapa</h2>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+    var map = L.map('map').setView([-8.283, -35.976], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Mapa'
+    }).addTo(map);
+
+    L.marker([-8.283, -35.976]).addTo(map)
+        .bindPopup('Casa disponível')
+        .openPopup();
+</script>
+
 </body>
 </html>
