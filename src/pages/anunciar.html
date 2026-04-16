@@ -3,75 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/anunciar.css">
     <title>Anunciar</title>
 </head>
+
+
 <body>
-    <form action="javascript: enviar();" id="novo-imovel">
+    <header class="navbar">
+    <div class="logo"><a href="/index.html"><img src="../assets/images/Maplar.svg" alt="Maplar logo"></a></div>
+    
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#">Explorar</a></li>
+            <li><a href="#">Mapa</a></li>
+            <li><a href="/src/pages/anunciar.html">Anunciar</a></li>
+            <li><a href="/src/pages/meus-anuncios.html">Meus Anúncios</a></li>
+        </ul>
+    </nav>
+    </header>
 
-        <h1>Anunciar Imóvel</h1>
 
-        <div>
-            <label for="fotos">
-                Imagem do imóvel
-                <input type="file" id="foto-imovel" accept="image/*" />
-            </label>
-        </div>
+    <div class="container-pag">
+        <form id="formImovel" name="formImovel" onsubmit="capturarDados(event)">
+            <h1 class="titulo-pagina">Anunciar meu imóvel</h1>
+            <h2 class="rotulo">Inserir imagem</h2>
+            <div class="container-imagem">
+                <div class="inserir-imagem">
+                    <input type="file" id="imagem" name="imagem" accept="image/*" />
+                </div>
+            </div>
         
-        <div>
-            <label for="negocio">
-                Tipo de negócio
-                <input type="radio" id="aluguel" name="tipo" value="aluguel" />
-                <label for="aluguel">Aluguel</label>
-                <input type="radio" id="venda" name="tipo" value="venda" />
-                <label for="venda">Venda</label>
-            </label>
-        </div>
-        
-
-        <h2>Detalhes</h2>
-
-        <div>
-            <label for="titulo">
-                Título
-                <input type="text" name="titulo" id="titulo" >
-            </label>
-        </div>
-
-        <div>
-            <label for="valor">
-                Valor
-                <input type="number" name="valor" id="valor">
-            </label>
-        </div>
-
-        <div>
-            <label for="descricao">
-                Descrição
-                <textarea name="descricao" id="descricao"></textarea>
-            </label>
-        </div>
-
-        <div>
-            <label for="quartos">
-                Quartos
-                <input type="number" name="quartos" id="quartos">
-            </label>
-        </div>
-
-        <div>
-            <label for="banheiro">
-                Banheiros
-                <input type="number" name="banheiro" id="banheiro">
-            </label>
-        </div>
-        
-        <div>
-            <button type="submit" id="publicar">Publicar anúncio</button>
-        </div>
-    </form>
-
-
+            <div>
+                <h2 class="topicos-pagina">Tipo de anúncio</h2>
+                <div class="container-tipo-anuncio">
+                    <div class="tipo-anuncio">
+                        <input type="radio" id="aluguel" name="tipo" value="aluguel" />
+                        <label for="aluguel">Aluguel</label>
+                        <p>Anuncie para alugar rápido e com segurança</p>
+                    </div>
+                    <div class="tipo-anuncio">
+                        <input type="radio" id="venda" name="tipo" value="venda"/>
+                        <label for="venda">Venda</label>
+                        <p for>Venda seu imóvel pelo melhor preço de mercado</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="topicos-pagina">Detalhes do imovel</h2>
+            <div class="superior-detalhes">
+                <div class="detalhe">
+                    <label for="titulo" class="rotulo">Título</label>
+                    <input type="text" name="titulo" id="titulo" >
+                </div>
+                <div class="detalhe">
+                    <label for="valor" class="rotulo">Valor</label>
+                    <input type="number" name="preco" id="valor">
+                </div>
+            </div>
+            <div class="inferior-detalhes">
+                <div class="detalhe">
+                    <label for="descricao" class="rotulo">Descrição</label>
+                    <textarea name="descricao" id="descricao"></textarea>
+                </div>
+                <div class="direita-detalhes">
+                    <div class="detalhe">
+                        <label for="quarto" class="rotulo">Quartos</label>
+                        <input type="number" name="quarto" id="quarto">
+                    </div>
+                    <div class="detalhe">
+                        <label for="banheiro" class="rotulo">Banheiros</label>
+                        <input type="number" name="banheiro" id="banheiro">
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Publicar anúncio</button>
+        </form>
+    </div>
     <script src="../js/models/Imovel.js"></script>
     <script src="../js/anunciar.js"></script>
+
 </body>
 </html>

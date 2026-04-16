@@ -1,13 +1,13 @@
 class Imovel {
-    constructor(id, nome, preco, tipo, imagem, quartos, banheiros, descricao) {
-        this.id = Date.now();
-        this.nome = nome;
+    constructor(id, titulo, preco, tipo, imagem, quarto, banheiro, descricao) {
+        this.id = this.id = id ? id : Date.now();
+        this.titulo = titulo;
         this.preco = Number(preco);
-        this.tipo = tipo; // 'aluguel' ou 'venda'
+        this.tipo = tipo;
         this.imagem = imagem;
         this.descricao = descricao;
-        this.quartos = Number(quartos);
-        this.banheiros = Number(banheiros);
+        this.quarto = Number(quarto);
+        this.banheiro = Number(banheiro);
 
     }
 }

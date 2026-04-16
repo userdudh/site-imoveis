@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/anuncios.css">
 </head>
 <body>
-    <h1>Meus anúncios</h1>
+    <header class="navbar">
+    <div class="logo"><a href="/index.html"><img src="../assets/images/Maplar.svg" alt="Maplar logo"></a></div>
     
+    <nav>
+        <ul class="nav-links">
+            
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#">Explorar</a></li>
+            <li><a href="#">Mapa</a></li>
+            <li><a href="/src/pages/anunciar.html">Anunciar</a></li>
+            <li><a href="/src/pages/meus-anuncios.html">Meus Anúncios</a></li>
+        </ul>
+    </nav>
+    </header>
+
+<div class="container-geral">
+    <div class="navegacao-lateral">
+        <nav class ="menu-lateral">
+            <ul>
+                <li><a href="#">Meu perfil</a></li>
+                <li><a href="meus-anuncios.html">Meus anúncios</a></li>
+                <li><a href="#">Favoritos</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="anuncios">
+        <h1>Meus anúncios</h1>
+        <div id="containerAnuncios" class="lista-container">
+        </div>
+    </div>
+</div>
+
+    <script src="../js/listar.js"></script>
 </body>
 </html>
