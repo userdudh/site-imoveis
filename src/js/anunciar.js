@@ -54,5 +54,5 @@ function capturarDados(event) {
     }
 
     localStorage.setItem("imoveis", JSON.stringify(listaImoveis));
-    window.location.href = "meus-anuncios.html";
+    window.location.href = "src/pages/meus-anuncios.html";
 }

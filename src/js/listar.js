@@ -10,7 +10,7 @@ listaExibicao.forEach((imovel, index) => {
             <p><strong>${imovel.titulo}</strong> | ${imovel.tipo} | R$ ${imovel.preco},00 </p>
         </div>
         <div class="acoes">
-            <button onclick="window.location.href='anunciar.html?edit=${imovel.id}'">Editar</button>
+            <button onclick="window.location.href='src/pages/anunciar.html?edit=${imovel.id}'">Editar</button>
             <button onclick="excluir(${index})">Excluir</button>
         </div>
     `;
