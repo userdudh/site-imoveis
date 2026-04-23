@@ -36,6 +36,6 @@ function capturarDados(event) {
     const sucesso = imovelService.salvar(novoImovel);
 
     if (sucesso) {
-        window.location.href = "site-imoveis/src/pages/meus-anuncios.html";
+        window.location.href = "./meus-anuncios.html";
     }
 }
